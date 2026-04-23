@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, CheckCircle2, Download, ExternalLink, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Download, ExternalLink, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Tag } from "@/components/ui/tag";
@@ -49,8 +49,8 @@ export function HeroSection() {
 
               <div className="mt-10">
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <Button href={`mailto:${profile.email}?subject=Contacto%20profesional%20-%20Luis%20Calcina`}>
-                    <Mail className="h-4 w-4" aria-hidden="true" />
+                  <Button href={profile.whatsapp} target="_blank" rel="noreferrer">
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
                     Contactarme
                   </Button>
                   <Button href={profile.linkedin} target="_blank" rel="noreferrer" variant="secondary">

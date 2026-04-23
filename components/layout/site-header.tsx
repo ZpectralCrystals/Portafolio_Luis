@@ -38,7 +38,9 @@ export function SiteHeader() {
         </nav>
 
         <a
-          href={`mailto:${profile.email}`}
+          href={profile.whatsapp}
+          target="_blank"
+          rel="noreferrer"
           className="hidden rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-teal-900/10 transition hover:-translate-y-0.5 hover:bg-[var(--accent-strong)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] md:inline-flex"
         >
           Contactar
@@ -60,7 +62,9 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href={`mailto:${profile.email}`}
+              href={profile.whatsapp}
+              target="_blank"
+              rel="noreferrer"
               className="mt-2 block rounded-2xl bg-[var(--ink)] px-4 py-3 text-center text-sm font-semibold text-white"
             >
               Contactar
