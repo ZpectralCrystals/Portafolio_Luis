@@ -6,6 +6,8 @@ import { Tag } from "@/components/ui/tag";
 import { experiences } from "@/data/portfolio";
 
 export function ExperienceSection() {
+  const latestExperiences = experiences.slice(0, 3);
+
   return (
     <section id="experiencia" className="section-padding scroll-mt-24">
       <Container>
@@ -17,7 +19,7 @@ export function ExperienceSection() {
 
         <div className="relative mt-12 space-y-5">
           <div className="absolute left-6 top-8 hidden h-[calc(100%-4rem)] w-px bg-[linear-gradient(180deg,transparent,var(--line-strong),transparent)] lg:block" aria-hidden="true" />
-          {experiences.map((experience, index) => (
+          {latestExperiences.map((experience, index) => (
             <PremiumCard
               key={`${experience.company}-${experience.client}`}
               className="rounded-[2rem] transition hover:-translate-y-1 hover:border-[rgba(20,184,166,0.34)]"

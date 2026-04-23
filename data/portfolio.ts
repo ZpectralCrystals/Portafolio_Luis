@@ -17,6 +17,7 @@ export const profile = {
 export const navItems = [
   { label: "Sobre mí", href: "#sobre-mi" },
   { label: "Stack", href: "#stack" },
+  { label: "Proyectos", href: "#proyectos" },
   { label: "Experiencia", href: "#experiencia" },
   { label: "Impacto", href: "#impacto" },
   { label: "Contacto", href: "#contacto" }
@@ -115,6 +116,39 @@ export const skillCategories = [
     icon: "method",
     description: "Prácticas para sostener calidad técnica mientras el roadmap avanza.",
     skills: ["SCRUM", "Clean Code", "SOLID", "Clean Architecture", "Vertical Slicing"]
+  }
+] as const;
+
+export const projects = [
+  {
+    title: "FinScope",
+    type: "Plataforma de gestión financiera y visualización de indicadores",
+    summary:
+      "Plataforma financiera desarrollada con Next.js para gestionar movimientos, presupuestos e indicadores de negocio en tiempo real.",
+    description:
+      "Aplicación web enfocada en la administración de ingresos, egresos y presupuestos, permitiendo visualizar métricas financieras mediante dashboards interactivos. La solución fue diseñada para centralizar información económica, facilitar la toma de decisiones y mejorar el control operativo de pequeñas y medianas empresas.",
+    focus: "Gestión financiera, dashboards interactivos y control operativo.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Recharts"]
+  },
+  {
+    title: "ReservaPro",
+    type: "Sistema web de reservas, disponibilidad y gestión administrativa",
+    summary:
+      "Sistema de reservas desarrollado con Next.js para gestionar disponibilidad, citas y operación administrativa desde una sola plataforma.",
+    description:
+      "Plataforma de reservas online orientada a negocios que requieren agendamiento de citas, espacios o servicios. El sistema permite administrar disponibilidad, confirmar reservas y gestionar estados desde un panel interno, optimizando la operación y reduciendo la fricción en el proceso de atención al cliente.",
+    focus: "Agendamiento, disponibilidad y panel administrativo.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"]
+  },
+  {
+    title: "CommerceDesk",
+    type: "Dashboard administrativo para gestión comercial y operativa",
+    summary:
+      "Dashboard administrativo construido con Next.js para controlar productos, pedidos, clientes e inventario de forma centralizada.",
+    description:
+      "Sistema administrativo para la gestión de productos, pedidos, clientes e inventario, centralizando procesos clave del negocio en una interfaz moderna y eficiente. El proyecto fue planteado con una estructura escalable, priorizando organización de datos, productividad operativa y claridad visual en la administración del sistema.",
+    focus: "Operación comercial, inventario y productividad administrativa.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Supabase"]
   }
 ] as const;
 
