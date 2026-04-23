@@ -1,0 +1,13 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7F3EC"/>
+  <circle cx="1030" cy="112" r="238" fill="#D8F3EE"/>
+  <circle cx="120" cy="555" r="245" fill="#F0D9BF"/>
+  <rect x="78" y="70" width="1044" height="490" rx="42" fill="rgba(255,250,240,0.72)" stroke="rgba(23,33,43,0.12)" stroke-width="2"/>
+  <rect x="128" y="120" width="116" height="116" rx="30" fill="#17212B"/>
+  <path d="M157 202V154H170.5V190H194V202H157Z" fill="#FFF7EA"/>
+  <path d="M217.4 165.5C213.8 162.3 209.3 160.6 204.1 160.6C193.1 160.6 185.1 168.6 185.1 180.2C185.1 191.8 193.1 199.9 204.3 199.9C209.7 199.9 214.3 198 217.8 194.4L210.1 186.5C208.5 188 206.7 188.7 204.5 188.7C200.1 188.7 197 185.3 197 180.2C197 175.3 200.1 171.8 204.5 171.8C206.8 171.8 208.5 172.5 210 174L217.4 165.5Z" fill="#8FE3D6"/>
+  <text x="128" y="312" fill="#0F766E" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="7">SENIOR FRONTEND DEVELOPER</text>
+  <text x="128" y="390" fill="#17212B" font-family="Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="-4">Luis Fernando Calcina Ticlla</text>
+  <text x="128" y="462" fill="#5F6B75" font-family="Arial, sans-serif" font-size="32" font-weight="500">React · Next.js · TypeScript · Arquitectura · Performance · SEO</text>
+  <text x="128" y="514" fill="#5F6B75" font-family="Arial, sans-serif" font-size="25" font-weight="500">Banca · Fintech · Media · SaaS · Arequipa, Perú</text>
+</svg>
