@@ -10,12 +10,8 @@ type CircularSkillProgressProps = {
   description: string;
   delay?: number;
   className?: string;
+  compact?: boolean;
 };
-
-const size = 154;
-const strokeWidth = 10;
-const radius = (size - strokeWidth) / 2;
-const circumference = 2 * Math.PI * radius;
 
 export function CircularSkillProgress({
   name,
@@ -23,11 +19,17 @@ export function CircularSkillProgress({
   category,
   description,
   delay = 0,
-  className
+  className,
+  compact = false
 }: CircularSkillProgressProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [animatedValue, setAnimatedValue] = useState(0);
+  const size = compact ? 140 : 154;
+  const strokeWidth = compact ? 9 : 10;
+  const innerSize = compact ? 96 : 108;
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
 
   useEffect(() => {
     const node = ref.current;
@@ -97,12 +99,14 @@ export function CircularSkillProgress({
       ref={ref}
       aria-label={`${name}: ${percentage}% de dominio percibido. ${description}`}
       className={cn(
-        "group relative overflow-hidden rounded-[1.8rem] border border-[var(--line)] bg-white/70 p-5 text-center shadow-[0_18px_54px_rgba(17,24,39,0.07)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[rgba(15,118,110,0.32)] hover:bg-white/86 hover:shadow-[0_24px_70px_rgba(17,24,39,0.1)]",
+        "group relative flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(255,255,252,0.86),rgba(255,255,252,0.66))] p-4 text-center shadow-[0_16px_48px_rgba(17,24,39,0.06)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[rgba(15,118,110,0.32)] hover:bg-white/88 hover:shadow-[0_24px_70px_rgba(17,24,39,0.095)] sm:p-5",
+        compact && "lg:p-4",
         className
       )}
     >
-      <div className="absolute inset-x-6 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(15,118,110,0.4),transparent)]" />
-      <div className="relative mx-auto grid h-[154px] w-[154px] place-items-center">
+      <div className="absolute inset-x-6 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(15,118,110,0.42),transparent)]" />
+      <div className="absolute -right-10 -top-12 h-24 w-24 rounded-full bg-[rgba(15,118,110,0.08)] blur-2xl transition group-hover:bg-[rgba(15,118,110,0.14)]" />
+      <div className="relative mx-auto grid place-items-center" style={{ height: size, width: size }}>
         <svg
           aria-hidden="true"
           className="-rotate-90 drop-shadow-[0_14px_24px_rgba(15,118,110,0.12)]"
@@ -128,13 +132,16 @@ export function CircularSkillProgress({
             strokeDashoffset={strokeDashoffset}
             strokeLinecap="round"
             strokeWidth={strokeWidth}
-            className="transition-[stroke-dashoffset] duration-500 ease-out"
+            className="transition-[stroke-dashoffset] duration-500 ease-out [filter:drop-shadow(0_0_10px_rgba(15,118,110,0.18))]"
           />
         </svg>
 
-        <div className="absolute grid h-[108px] w-[108px] place-items-center rounded-full border border-[var(--line)] bg-[rgba(255,255,252,0.88)] shadow-[inset_0_1px_0_rgba(255,255,255,0.88),0_14px_34px_rgba(17,24,39,0.06)]">
+        <div
+          className="absolute grid place-items-center rounded-full border border-[var(--line)] bg-[rgba(255,255,252,0.92)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_14px_34px_rgba(17,24,39,0.06)]"
+          style={{ height: innerSize, width: innerSize }}
+        >
           <div>
-            <p className="text-3xl font-semibold tracking-[-0.06em] text-[var(--ink)]">{animatedValue}%</p>
+            <p className="text-2xl font-semibold tracking-[-0.06em] text-[var(--ink)] sm:text-3xl">{animatedValue}%</p>
             <p className="mono mt-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-[var(--ink-muted)]">
               dominio
             </p>
@@ -142,11 +149,11 @@ export function CircularSkillProgress({
         </div>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 flex flex-1 flex-col">
         <p className="mono text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[var(--accent-strong)]">
           {category}
         </p>
-        <h3 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-[var(--ink)]">{name}</h3>
+        <h3 className="mt-2 text-lg font-semibold leading-6 tracking-[-0.04em] text-[var(--ink)] sm:text-xl">{name}</h3>
         <p className="mt-3 text-sm leading-6 text-[var(--ink-muted)]">{description}</p>
       </div>
     </article>

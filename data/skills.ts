@@ -5,6 +5,12 @@ export type SkillProgress = {
   description: string;
 };
 
+export type SkillHighlight = {
+  title: string;
+  description: string;
+  icon: "architecture" | "performance" | "seo" | "testing" | "api" | "scale" | "leadership" | "collaboration";
+};
+
 export const coreSkillProgress: SkillProgress[] = [
   {
     name: "JavaScript",
@@ -65,5 +71,48 @@ export const coreSkillProgress: SkillProgress[] = [
     percentage: 78,
     category: "Legacy migration",
     description: "Experiencia útil para migraciones progresivas hacia React/Next."
+  }
+];
+
+export const skillHighlights: SkillHighlight[] = [
+  {
+    title: "Arquitectura Frontend",
+    description: "Decisiones de estructura, dominio, composición y límites claros entre UI, estado e integración.",
+    icon: "architecture"
+  },
+  {
+    title: "Performance Web",
+    description: "Optimización de carga, render e interacción con foco en Core Web Vitals y percepción de velocidad.",
+    icon: "performance"
+  },
+  {
+    title: "SEO Técnico",
+    description: "Semántica, metadata, rendering strategy y buenas prácticas para indexación sostenible.",
+    icon: "seo"
+  },
+  {
+    title: "Testing y calidad",
+    description: "Cobertura pragmática para flujos críticos con Jest, RTL y Cypress.",
+    icon: "testing"
+  },
+  {
+    title: "Integración con APIs",
+    description: "Consumo de servicios enterprise, autenticación, manejo de estado y contratos claros.",
+    icon: "api"
+  },
+  {
+    title: "Escalabilidad de interfaces",
+    description: "Componentes reutilizables, design systems y patrones preparados para equipos en crecimiento.",
+    icon: "scale"
+  },
+  {
+    title: "Liderazgo técnico",
+    description: "Code reviews, mentoring, pair programming y criterios compartidos de delivery.",
+    icon: "leadership"
+  },
+  {
+    title: "Trabajo cross-functional",
+    description: "Colaboración con UX/UI, producto, backend y QA para entregar soluciones viables.",
+    icon: "collaboration"
   }
 ];
