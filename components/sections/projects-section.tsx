@@ -61,6 +61,18 @@ export function ProjectsSection() {
                   </h3>
                   <p className="mt-3 text-sm font-semibold leading-7 text-[var(--ink-muted)]">{project.type}</p>
 
+                  {project.officialUrl ? (
+                    <a
+                      href={project.officialUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-flex w-fit items-center gap-2 text-sm font-semibold text-[var(--accent-strong)] transition hover:text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
+                    >
+                      Sitio oficial
+                      <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                    </a>
+                  ) : null}
+
                   <div className="mt-6 rounded-3xl border border-[var(--line)] bg-[var(--surface-muted)] p-4">
                     <p className="text-sm font-semibold leading-7 text-[var(--ink)]">{project.summary}</p>
                   </div>

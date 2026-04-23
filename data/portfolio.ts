@@ -121,24 +121,26 @@ export const skillCategories = [
 
 export const projects = [
   {
-    title: "FinScope",
-    type: "Plataforma de gestión financiera y visualización de indicadores",
+    title: "Izipay Sales Platform",
+    type: "Plataforma de ventas y pagos para operación comercial",
     summary:
-      "Plataforma financiera desarrollada con Next.js para gestionar movimientos, presupuestos e indicadores de negocio en tiempo real.",
+      "Plataforma orientada a ventas y pagos, enfocada en optimizar la operación comercial mediante flujos frontend claros, arquitectura escalable e integración con servicios críticos del negocio.",
     description:
-      "Aplicación web enfocada en la administración de ingresos, egresos y presupuestos, permitiendo visualizar métricas financieras mediante dashboards interactivos. La solución fue diseñada para centralizar información económica, facilitar la toma de decisiones y mejorar el control operativo de pequeñas y medianas empresas.",
-    focus: "Gestión financiera, dashboards interactivos y control operativo.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Recharts"]
+      "Proyecto enfocado en la evolución de una plataforma de ventas y pagos para el sector fintech, orientado a mejorar mantenibilidad, escalabilidad y experiencia operativa. La solución se trabajó bajo una arquitectura moderna en frontend, priorizando separación por dominio, consistencia visual, integración con servicios críticos y soporte a flujos clave del negocio.",
+    focus: "Ventas, pagos, operación comercial y arquitectura por dominio.",
+    stack: ["Next.js", "React", "TypeScript", "Sentry", "CloudWatch"],
+    officialUrl: "https://www.izipay.pe/"
   },
   {
-    title: "ReservaPro",
-    type: "Sistema web de reservas, disponibilidad y gestión administrativa",
+    title: "Fortuna Digital Experience",
+    type: "Plataforma digital fintech orientada a experiencia de usuario y operación financiera",
     summary:
-      "Sistema de reservas desarrollado con Next.js para gestionar disponibilidad, citas y operación administrativa desde una sola plataforma.",
+      "Experiencia digital fintech orientada a productos financieros, con foco en usabilidad, mantenibilidad y escalabilidad frontend.",
     description:
-      "Plataforma de reservas online orientada a negocios que requieren agendamiento de citas, espacios o servicios. El sistema permite administrar disponibilidad, confirmar reservas y gestionar estados desde un panel interno, optimizando la operación y reduciendo la fricción en el proceso de atención al cliente.",
-    focus: "Agendamiento, disponibilidad y panel administrativo.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"]
+      "Proyecto vinculado al ecosistema digital de Fortuna, enfocado en construir y mejorar experiencias frontend modernas para productos financieros. La implementación prioriza claridad de interfaz, rendimiento, mantenibilidad del código y una arquitectura preparada para escalar funcionalidades del negocio.",
+    focus: "Experiencia de usuario, operación financiera y escalabilidad frontend.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    officialUrl: "https://www.fortuna.com.pe/"
   },
   {
     title: "CommerceDesk",
@@ -148,7 +150,8 @@ export const projects = [
     description:
       "Sistema administrativo para la gestión de productos, pedidos, clientes e inventario, centralizando procesos clave del negocio en una interfaz moderna y eficiente. El proyecto fue planteado con una estructura escalable, priorizando organización de datos, productividad operativa y claridad visual en la administración del sistema.",
     focus: "Operación comercial, inventario y productividad administrativa.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Supabase"]
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Supabase"],
+    officialUrl: null
   }
 ] as const;
 
