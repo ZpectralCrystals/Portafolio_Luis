@@ -99,13 +99,13 @@ export function CircularSkillProgress({
       ref={ref}
       aria-label={`${name}: ${percentage}% de dominio percibido. ${description}`}
       className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(255,255,252,0.86),rgba(255,255,252,0.66))] p-4 text-center shadow-[0_16px_48px_rgba(17,24,39,0.06)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[rgba(15,118,110,0.32)] hover:bg-white/88 hover:shadow-[0_24px_70px_rgba(17,24,39,0.095)] sm:p-5",
+        "group relative flex h-full flex-col overflow-hidden rounded-[1.7rem] border border-[var(--line)] bg-[var(--surface)] p-4 text-center shadow-[0_16px_48px_rgba(15,23,42,0.055)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[rgba(20,184,166,0.36)] hover:bg-[var(--surface-strong)] hover:shadow-[0_24px_70px_rgba(15,23,42,0.085)] sm:p-5",
         compact && "lg:p-4",
         className
       )}
     >
       <div className="absolute inset-x-6 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(15,118,110,0.42),transparent)]" />
-      <div className="absolute -right-10 -top-12 h-24 w-24 rounded-full bg-[rgba(15,118,110,0.08)] blur-2xl transition group-hover:bg-[rgba(15,118,110,0.14)]" />
+      <div className="absolute -right-10 -top-12 h-24 w-24 rounded-full bg-[rgba(15,118,110,0.08)] blur-2xl transition group-hover:bg-[rgba(20,184,166,0.16)]" />
       <div className="relative mx-auto grid place-items-center" style={{ height: size, width: size }}>
         <svg
           aria-hidden="true"
@@ -119,7 +119,7 @@ export function CircularSkillProgress({
             cy={size / 2}
             fill="none"
             r={radius}
-            stroke="rgba(17, 24, 39, 0.08)"
+            stroke="var(--skill-track)"
             strokeWidth={strokeWidth}
           />
           <circle
@@ -137,7 +137,7 @@ export function CircularSkillProgress({
         </svg>
 
         <div
-          className="absolute grid place-items-center rounded-full border border-[var(--line)] bg-[rgba(255,255,252,0.92)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_14px_34px_rgba(17,24,39,0.06)]"
+          className="absolute grid place-items-center rounded-full border border-[var(--line)] bg-[var(--surface-strong)] shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_14px_34px_rgba(15,23,42,0.055)]"
           style={{ height: innerSize, width: innerSize }}
         >
           <div>

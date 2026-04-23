@@ -9,11 +9,11 @@ type ButtonProps = ComponentPropsWithoutRef<"a"> & {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-[var(--ink)] text-white shadow-[0_18px_45px_rgba(17,24,39,0.22)] hover:-translate-y-0.5 hover:bg-[#0b1220] hover:shadow-[0_24px_60px_rgba(17,24,39,0.24)]",
+    "bg-[var(--contrast)] text-[var(--contrast-foreground)] shadow-[0_18px_45px_rgba(15,23,42,0.18)] hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-[var(--accent-foreground)] hover:shadow-[0_24px_60px_rgba(20,184,166,0.18)]",
   secondary:
-    "border border-[var(--line-strong)] bg-white/78 text-[var(--ink)] shadow-[0_12px_34px_rgba(17,24,39,0.07)] hover:-translate-y-0.5 hover:border-[rgba(15,118,110,0.38)] hover:bg-white",
+    "border border-[var(--line-strong)] bg-[var(--surface)] text-[var(--ink)] shadow-[0_12px_34px_rgba(15,23,42,0.06)] hover:-translate-y-0.5 hover:border-[var(--accent-hover)] hover:bg-[var(--surface-strong)]",
   ghost:
-    "text-[var(--accent-strong)] hover:bg-[rgba(15,118,110,0.09)] hover:text-[var(--ink)]"
+    "text-[var(--accent-strong)] hover:bg-[rgba(20,184,166,0.1)] hover:text-[var(--ink)]"
 };
 
 export function Button({ children, className, variant = "primary", ...props }: ButtonProps) {

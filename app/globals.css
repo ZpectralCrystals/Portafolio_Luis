@@ -1,23 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f1ea;
-  --background-soft: #fbfaf6;
-  --surface: rgba(255, 255, 252, 0.84);
-  --surface-strong: #fffefa;
-  --surface-muted: #ede8dd;
-  --ink: #111827;
-  --ink-soft: #263241;
-  --ink-muted: #64707d;
-  --line: rgba(17, 24, 39, 0.11);
-  --line-strong: rgba(17, 24, 39, 0.18);
+  --background: #f8fafc;
+  --background-soft: #ffffff;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: #ffffff;
+  --surface-muted: #f1f5f9;
+  --ink: #0f172a;
+  --ink-soft: #1e293b;
+  --ink-muted: #475569;
+  --line: #e2e8f0;
+  --line-strong: #cbd5e1;
   --accent: #0f766e;
-  --accent-strong: #0f5f59;
-  --accent-soft: #dff5ef;
-  --champagne: #f3dfbd;
-  --copper: #a8662f;
-  --shadow-soft: 0 24px 80px rgba(17, 24, 39, 0.10);
-  --shadow-card: 0 18px 60px rgba(17, 24, 39, 0.075);
+  --accent-strong: #0f766e;
+  --accent-hover: #14b8a6;
+  --accent-foreground: #ffffff;
+  --accent-soft: #f0fdfa;
+  --accent-on-contrast: #99f6e4;
+  --champagne: #f1f5f9;
+  --copper: #14b8a6;
+  --contrast: #0f172a;
+  --contrast-muted: #1e293b;
+  --contrast-foreground: #f8fafc;
+  --contrast-foreground-soft: rgba(248, 250, 252, 0.88);
+  --contrast-foreground-muted: rgba(248, 250, 252, 0.72);
+  --contrast-foreground-faint: rgba(248, 250, 252, 0.48);
+  --contrast-line: rgba(248, 250, 252, 0.1);
+  --contrast-card: rgba(248, 250, 252, 0.055);
+  --contrast-card-hover: rgba(248, 250, 252, 0.1);
+  --contrast-card-strong: rgba(2, 6, 23, 0.56);
+  --contrast-button-hover: #ccfbf1;
+  --surface-fade: rgba(255, 255, 255, 0.68);
+  --card-glint: rgba(255, 255, 255, 0.42);
+  --hero-overlay: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(248, 250, 252, 0.62) 48%, rgba(240, 253, 250, 0.42));
+  --dot-color: rgba(15, 23, 42, 0.09);
+  --skill-track: rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 24px 80px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 18px 60px rgba(15, 23, 42, 0.065);
+}
+
+[data-theme="dark"] {
+  --background: #020617;
+  --background-soft: #0f172a;
+  --surface: rgba(15, 23, 42, 0.84);
+  --surface-strong: #111827;
+  --surface-muted: #1e293b;
+  --ink: #e2e8f0;
+  --ink-soft: #cbd5e1;
+  --ink-muted: #94a3b8;
+  --line: rgba(148, 163, 184, 0.22);
+  --line-strong: rgba(148, 163, 184, 0.34);
+  --accent: #14b8a6;
+  --accent-strong: #5eead4;
+  --accent-hover: #2dd4bf;
+  --accent-foreground: #042f2e;
+  --accent-soft: rgba(20, 184, 166, 0.14);
+  --accent-on-contrast: #5eead4;
+  --champagne: #0f172a;
+  --copper: #2dd4bf;
+  --contrast: #020617;
+  --contrast-muted: #0f172a;
+  --contrast-foreground: #f8fafc;
+  --contrast-foreground-soft: rgba(248, 250, 252, 0.88);
+  --contrast-foreground-muted: rgba(226, 232, 240, 0.72);
+  --contrast-foreground-faint: rgba(226, 232, 240, 0.48);
+  --contrast-line: rgba(226, 232, 240, 0.1);
+  --contrast-card: rgba(248, 250, 252, 0.055);
+  --contrast-card-hover: rgba(248, 250, 252, 0.1);
+  --contrast-card-strong: rgba(15, 23, 42, 0.72);
+  --contrast-button-hover: #99f6e4;
+  --surface-fade: rgba(15, 23, 42, 0.56);
+  --card-glint: rgba(248, 250, 252, 0.06);
+  --hero-overlay: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(2, 6, 23, 0.42) 48%, rgba(20, 184, 166, 0.08));
+  --dot-color: rgba(226, 232, 240, 0.07);
+  --skill-track: rgba(148, 163, 184, 0.22);
+  --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.34);
+  --shadow-card: 0 18px 60px rgba(0, 0, 0, 0.24);
+  color-scheme: dark;
 }
 
 * {
@@ -26,15 +85,16 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 8% 4%, rgba(15, 118, 110, 0.12), transparent 27rem),
-    radial-gradient(circle at 90% 8%, rgba(168, 102, 47, 0.11), transparent 27rem),
-    linear-gradient(180deg, var(--background-soft) 0%, var(--background) 44%, #eee7dc 100%);
+    radial-gradient(circle at 8% 4%, rgba(20, 184, 166, 0.08), transparent 28rem),
+    radial-gradient(circle at 90% 8%, rgba(15, 118, 110, 0.06), transparent 28rem),
+    linear-gradient(180deg, var(--background-soft) 0%, var(--background) 46%, var(--background) 100%);
   color: var(--ink);
   font-family: var(--font-sans), ui-sans-serif, sans-serif;
   text-rendering: optimizeLegibility;
@@ -53,6 +113,19 @@ a {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+body,
+header,
+footer,
+.glass-panel,
+.quiet-panel,
+.premium-card {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    color 220ms ease;
 }
 
 @layer utilities {
@@ -77,7 +150,7 @@ a {
 
   .quiet-panel {
     border: 1px solid var(--line);
-    background: rgba(255, 255, 252, 0.68);
+    background: var(--surface);
     box-shadow: var(--shadow-card);
     backdrop-filter: blur(16px);
   }
@@ -87,8 +160,8 @@ a {
     overflow: hidden;
     border: 1px solid var(--line);
     background:
-      linear-gradient(180deg, rgba(255, 255, 252, 0.92), rgba(255, 255, 252, 0.72)),
-      radial-gradient(circle at top right, rgba(15, 118, 110, 0.08), transparent 18rem);
+      linear-gradient(180deg, var(--surface), var(--surface-fade)),
+      radial-gradient(circle at top right, rgba(20, 184, 166, 0.08), transparent 18rem);
     box-shadow: var(--shadow-card);
     backdrop-filter: blur(18px);
   }
@@ -98,20 +171,20 @@ a {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), transparent 34%);
+    background: linear-gradient(180deg, var(--card-glint), transparent 34%);
     opacity: 0.72;
   }
 
   .dot-grid {
-    background-image: radial-gradient(rgba(17, 24, 39, 0.105) 1px, transparent 1px);
+    background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
     background-size: 26px 26px;
   }
 
   .section-divider {
     border-block: 1px solid var(--line);
     background:
-      linear-gradient(90deg, transparent, rgba(15, 118, 110, 0.08), transparent),
-      rgba(255, 255, 252, 0.34);
+      linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.07), transparent),
+      var(--surface);
   }
 
   .hairline {

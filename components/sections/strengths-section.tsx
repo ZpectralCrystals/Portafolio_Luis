@@ -19,7 +19,7 @@ export function StrengthsSection() {
             {strengths.map((strength) => (
               <PremiumCard
                 key={strength.title}
-                className="group rounded-[1.6rem] p-5 transition hover:-translate-y-1 hover:border-[rgba(15,118,110,0.28)]"
+                className="group rounded-[1.6rem] p-5 transition hover:-translate-y-1 hover:border-[rgba(20,184,166,0.34)]"
               >
                 <article>
                   <div className="flex items-center justify-between gap-4">

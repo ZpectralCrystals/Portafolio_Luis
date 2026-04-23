@@ -28,7 +28,7 @@ export function CaseStudiesSection() {
                       {study.title}
                     </h3>
                   </div>
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[var(--ink)] text-white shadow-[0_12px_34px_rgba(17,24,39,0.15)]">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[var(--contrast)] text-[var(--contrast-foreground)] shadow-[0_12px_34px_rgba(15,23,42,0.13)]">
                     <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
                   </span>
                 </div>
@@ -36,21 +36,21 @@ export function CaseStudiesSection() {
                 <p className="mt-6 text-sm leading-7 text-[var(--ink-muted)]">{study.context}</p>
 
                 <div className="mt-7 grid gap-3">
-                  <div className="rounded-3xl border border-[var(--line)] bg-white/62 p-5">
+                  <div className="rounded-3xl border border-[var(--line)] bg-[var(--surface)] p-5">
                     <p className="mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--ink-muted)]">Reto</p>
                     <p className="mt-3 text-sm leading-7 text-[var(--ink)]">{study.problem}</p>
                   </div>
-                  <div className="rounded-3xl border border-[var(--line)] bg-white/62 p-5">
+                  <div className="rounded-3xl border border-[var(--line)] bg-[var(--surface)] p-5">
                     <p className="mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--ink-muted)]">
                       Intervención
                     </p>
                     <p className="mt-3 text-sm leading-7 text-[var(--ink)]">{study.intervention}</p>
                   </div>
-                  <div className="rounded-3xl bg-[var(--ink)] p-5 text-white">
-                    <p className="mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-soft)]">
+                  <div className="rounded-3xl bg-[var(--contrast)] p-5 text-[var(--contrast-foreground)]">
+                    <p className="mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-on-contrast)]">
                       Impacto
                     </p>
-                    <p className="mt-3 text-sm leading-7 text-white/82">{study.result}</p>
+                    <p className="mt-3 text-sm leading-7 text-[var(--contrast-foreground-muted)]">{study.result}</p>
                   </div>
                 </div>
               </article>
@@ -58,7 +58,7 @@ export function CaseStudiesSection() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-[2rem] border border-[var(--line)] bg-white/62 p-6 text-center shadow-[0_16px_50px_rgba(17,24,39,0.06)]">
+        <div className="mt-8 rounded-[2rem] border border-[var(--line)] bg-[var(--surface)] p-6 text-center shadow-[0_16px_50px_rgba(15,23,42,0.055)]">
           <p className="mono text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-strong)]">
             Principio de trabajo
           </p>

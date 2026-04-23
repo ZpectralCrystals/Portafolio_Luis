@@ -12,7 +12,7 @@ export function SkillHighlightCard({ title, description, icon: Icon, className }
   return (
     <article
       className={cn(
-        "group h-full rounded-[1.45rem] border border-[var(--line)] bg-white/70 p-4 shadow-[0_14px_42px_rgba(17,24,39,0.05)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(15,118,110,0.28)] hover:bg-white/88 hover:shadow-[0_18px_52px_rgba(17,24,39,0.075)]",
+        "group h-full rounded-[1.45rem] border border-[var(--line)] bg-[var(--surface)] p-4 shadow-[0_14px_42px_rgba(15,23,42,0.045)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(20,184,166,0.34)] hover:bg-[var(--surface-strong)] hover:shadow-[0_18px_52px_rgba(15,23,42,0.065)]",
         className
       )}
     >

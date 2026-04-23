@@ -62,21 +62,21 @@ export function SkillsSection() {
         </div>
 
         <div className="mt-11 grid gap-5 xl:grid-cols-[0.34fr_0.66fr]">
-          <aside className="relative overflow-hidden rounded-[2rem] bg-[var(--ink)] p-6 text-white shadow-[0_24px_80px_rgba(17,24,39,0.2)] sm:p-8">
+          <aside className="relative overflow-hidden rounded-[2rem] bg-[var(--contrast)] p-6 text-[var(--contrast-foreground)] shadow-[0_24px_80px_rgba(15,23,42,0.18)] sm:p-8">
             <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-[rgba(15,118,110,0.28)] blur-3xl" aria-hidden="true" />
-            <div className="absolute bottom-0 left-0 h-52 w-52 rounded-full bg-[rgba(168,102,47,0.2)] blur-3xl" aria-hidden="true" />
+            <div className="absolute bottom-0 left-0 h-52 w-52 rounded-full bg-[rgba(20,184,166,0.16)] blur-3xl" aria-hidden="true" />
 
             <div className="relative">
-              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white/10 text-[var(--accent-soft)] ring-1 ring-white/10">
+              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[var(--contrast-card)] text-[var(--accent-on-contrast)] ring-1 ring-[var(--contrast-line)]">
                 <Sparkles className="h-5 w-5" aria-hidden="true" />
               </div>
-              <p className="mono mt-7 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-soft)]">
+              <p className="mono mt-7 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-on-contrast)]">
                 Especialización profesional
               </p>
               <h3 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-[-0.055em]">
                 Skills entendidos como capacidad de resolver producto, no solo usar herramientas.
               </h3>
-              <p className="mt-5 text-pretty text-sm leading-7 text-white/70">
+              <p className="mt-5 text-pretty text-sm leading-7 text-[var(--contrast-foreground-muted)]">
                 Los porcentajes representan dominio percibido por experiencia real en proyectos enterprise:
                 arquitectura, migraciones, medición, testing y colaboración con equipos de producto.
               </p>
@@ -87,24 +87,24 @@ export function SkillsSection() {
                   { label: "Producto web", value: "Next.js · SEO · Core Web Vitals" },
                   { label: "Escala", value: "Architecture · Testing · Design Systems" }
                 ].map((item) => (
-                  <div key={item.label} className="rounded-3xl border border-white/10 bg-white/[0.055] p-4">
-                    <p className="mono text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/42">
+                  <div key={item.label} className="rounded-3xl border border-[var(--contrast-line)] bg-[var(--contrast-card)] p-4">
+                    <p className="mono text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[var(--contrast-foreground-faint)]">
                       {item.label}
                     </p>
-                    <p className="mt-2 text-sm font-semibold leading-6 text-white/86">{item.value}</p>
+                    <p className="mt-2 text-sm font-semibold leading-6 text-[var(--contrast-foreground-soft)]">{item.value}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 rounded-3xl border border-white/10 bg-[#0b1220]/72 p-5">
-                <div className="flex items-center gap-2 text-xs text-white/42">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#06d6a0]" />
+              <div className="mt-8 rounded-3xl border border-[var(--contrast-line)] bg-[var(--contrast-card-strong)] p-5">
+                <div className="flex items-center gap-2 text-xs text-[var(--contrast-foreground-faint)]">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent-hover)]" />
                   <span className="mono">skill-index.ts</span>
                 </div>
                 <div className="mono mt-5 space-y-3 text-sm leading-7">
-                  <p><span className="text-[var(--accent-soft)]">measure</span>: professional depth;</p>
-                  <p><span className="text-[var(--accent-soft)]">motion</span>: on viewport, no noise;</p>
-                  <p><span className="text-[var(--accent-soft)]">goal</span>: clarity for technical recruiters;</p>
+                  <p><span className="text-[var(--accent-on-contrast)]">measure</span>: professional depth;</p>
+                  <p><span className="text-[var(--accent-on-contrast)]">motion</span>: on viewport, no noise;</p>
+                  <p><span className="text-[var(--accent-on-contrast)]">goal</span>: clarity for technical recruiters;</p>
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ export function SkillsSection() {
                   Dominio técnico principal
                 </h3>
               </div>
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--line)] bg-white/72 px-3 py-2 text-sm font-semibold text-[var(--ink-muted)]">
+              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-sm font-semibold text-[var(--ink-muted)]">
                 <BarChart3 className="h-4 w-4 text-[var(--accent)]" aria-hidden="true" />
                 Percepción profesional
               </div>
@@ -143,9 +143,9 @@ export function SkillsSection() {
         </div>
 
         <div className="mt-8 grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-[1.8rem] border border-dashed border-[rgba(15,118,110,0.32)] bg-[rgba(223,245,239,0.44)] p-6">
+          <div className="rounded-[1.8rem] border border-dashed border-[rgba(20,184,166,0.32)] bg-[var(--accent-soft)] p-6">
             <div className="flex items-start gap-4">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-white/72 text-[var(--accent-strong)] ring-1 ring-[rgba(15,118,110,0.14)]">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[var(--surface)] text-[var(--accent-strong)] ring-1 ring-[rgba(15,118,110,0.14)]">
                 <Activity className="h-5 w-5" aria-hidden="true" />
               </div>
               <div>
@@ -160,9 +160,9 @@ export function SkillsSection() {
             </div>
           </div>
 
-          <div className="rounded-[1.8rem] border border-[var(--line)] bg-white/68 p-6 shadow-[0_16px_48px_rgba(17,24,39,0.06)]">
+          <div className="rounded-[1.8rem] border border-[var(--line)] bg-[var(--surface)] p-6 shadow-[0_16px_48px_rgba(15,23,42,0.055)]">
             <div className="flex items-start gap-4">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[var(--ink)] text-white">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[var(--contrast)] text-[var(--contrast-foreground)]">
                 <GitBranch className="h-5 w-5" aria-hidden="true" />
               </div>
               <div>
